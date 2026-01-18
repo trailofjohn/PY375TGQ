@@ -119,14 +119,17 @@ PY375TGQ/
 
 ### Relativistic Time Dilation
 A clock on a moving spacecraft in a gravitational field ticks slower than a clock on Earth:
+
 $$\frac{d\tau}{dt} = 1 - \frac{GM}{c^2 r} - \frac{v^2}{2c^2}$$
 
 ### Shapiro Delay
 Light traveling near a massive object takes an extra time to arrive:
+
 $$\Delta t_{Shapiro} = \frac{4GM}{c^3} \ln\left(\frac{r_e + r_p + \rho}{r_e + r_p - \rho}\right)$$
 
 ### Light-Time Iteration
 The probe's position when the signal was *emitted* is not where it is *now*. We solve:
+
 $$\vec{r}_{emit} = \vec{r}(t_{recv} - \Delta t), \quad \Delta t = \frac{|\vec{r}_{emit} - \vec{r}_{recv}|}{c}$$
 
 ---
