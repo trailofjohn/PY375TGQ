@@ -1,8 +1,8 @@
-# Spacetime State Estimator V1
+# Spacetime State Estimator
 
 A relativistic navigation simulator demonstrating **Extended Kalman Filter (EKF)** techniques for deep-space missions. This project visualizes how spacecraft determine their position using radio signals, accounting for the effects of **General Relativity**.
 
-![Martian Standard](../results/martian_standard.png)
+![Martian Standard Dashboard](results/Screenshot%202026-01-18%20160803.png)
 
 ## Overview
 
@@ -15,7 +15,7 @@ This simulator demonstrates these concepts by running three mission scenarios an
 
 ---
 
-## Key Features (V1)
+## Key Features
 
 | Feature | Description |
 |:---|:---|
@@ -34,11 +34,17 @@ The simulator runs three pre-configured mission scenarios:
 ### Scenario A: Martian Standard
 A classic Hohmann transfer to Mars. Demonstrates nominal EKF convergence over a ~250-day mission.
 
+![Martian Standard](results/Screenshot%202026-01-18%20160803.png)
+
 ### Scenario B: Jovian Deep-Dive
 An 800-day mission to Jupiter. The key observation is the **Solar Conjunction**—when the probe passes behind the Sun relative to Earth. Watch the **Shapiro Delay** graph spike dramatically.
 
+![Jovian Deep-Dive](results/Screenshot%202026-01-18%20160821.png)
+
 ### Scenario C: Solar Grazer
 A probe on a highly elliptical orbit that dives to 0.05 AU from the Sun. This scenario demonstrates extreme **relativistic time dilation** and **velocity changes** (over 100 km/s at perihelion).
+
+![Solar Grazer](results/Screenshot%202026-01-18%20160834.png)
 
 ---
 
@@ -46,8 +52,8 @@ A probe on a highly elliptical orbit that dives to 0.05 AU from the Sun. This sc
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/PoA.git
-    cd PoA/v1/code
+    git clone https://github.com/trailofjohn/PY375TGQ.git
+    cd PY375TGQ/code
     ```
 
 2.  **Install dependencies:**
@@ -90,18 +96,21 @@ python main.py C   # Solar Grazer
 ## Project Structure
 
 ```
-v1/
+PY375TGQ/
 ├── code/
 │   ├── main.py                 # Entry point, multiprocessing orchestrator
 │   ├── simulation_core.py      # SpaceTimeState, DynamicsModel, MeasurementModel, EKF
 │   ├── simulation_scenarios.py # Scenario configurations (A, B, C)
 │   ├── visualization.py        # Matplotlib animation dashboard
 │   └── requirements.txt        # numpy, matplotlib
-└── text/
-    ├── feynman_physics.md      # Intuitive physics explanation
-    ├── textbook.md             # Technical manual
-    ├── walkthrough.md          # User guide
-    └── code_logic.md           # Code architecture
+├── text/
+│   ├── feynman_physics.md      # Intuitive physics explanation
+│   ├── textbook.md             # Technical manual
+│   ├── walkthrough.md          # User guide
+│   ├── code_logic.md           # Code architecture
+│   └── IMPROVEMENTS.md         # V2 roadmap
+├── results/                    # Dashboard screenshots
+└── README.md
 ```
 
 ---
